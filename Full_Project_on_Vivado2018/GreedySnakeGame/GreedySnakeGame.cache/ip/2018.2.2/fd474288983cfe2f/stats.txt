@@ -1,0 +1,4 @@
+NumberHits:3
+Timestamp: Wed Dec 05 15:22:26 UTC 2018
+VLNV: xilinx.com:ip:c_counter_binary:12.0
+SynthRuntime: 37
