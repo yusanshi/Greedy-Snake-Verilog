@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Fri Dec  7 23:50:04 2018
+| Date         : Sat Dec  8 22:21:34 2018
 | Host         : DESKTOP-QA2Q75J running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  739 |     0 |     63400 |  1.17 |
-|   LUT as Logic          |  739 |     0 |     63400 |  1.17 |
+| Slice LUTs*             |  742 |     0 |     63400 |  1.17 |
+|   LUT as Logic          |  742 |     0 |     63400 |  1.17 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         |  652 |     0 |    126800 |  0.51 |
 |   Register as Flip Flop |  652 |     0 |    126800 |  0.51 |
@@ -80,8 +80,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    1 |     0 |       240 |  0.42 |
-|   DSP48E1 only |    1 |       |           |       |
+| DSPs           |    2 |     0 |       240 |  0.83 |
+|   DSP48E1 only |    2 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -148,20 +148,20 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  594 |        Flop & Latch |
-| LUT6     |  392 |                 LUT |
-| LUT5     |  131 |                 LUT |
-| LUT4     |  127 |                 LUT |
-| LUT2     |   96 |                 LUT |
-| CARRY4   |   67 |          CarryLogic |
-| LUT3     |   46 |                 LUT |
+| LUT6     |  400 |                 LUT |
+| LUT5     |  135 |                 LUT |
+| LUT4     |  132 |                 LUT |
+| LUT2     |   88 |                 LUT |
+| CARRY4   |   65 |          CarryLogic |
+| LUT3     |   51 |                 LUT |
 | OBUF     |   30 |                  IO |
 | FDCE     |   30 |        Flop & Latch |
 | FDSE     |   27 |        Flop & Latch |
-| LUT1     |   16 |                 LUT |
+| LUT1     |   18 |                 LUT |
 | IBUF     |    8 |                  IO |
+| DSP48E1  |    2 |    Block Arithmetic |
 | MUXF7    |    1 |               MuxFx |
 | FDPE     |    1 |        Flop & Latch |
-| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module seg(
+	// 变量说明见top模块
     input reset,
     input clock,
     input [3:0] score_a,score_b,score_c,score_d,
@@ -33,6 +34,7 @@ module seg(
     	end
     	else
     	begin
+    		// count每数100000切换数码管，相当于每次切换的时间为100k/100M=1/1000s=1ms
 			if (count==400000) 
 			begin
 				an<=8'b11111110;

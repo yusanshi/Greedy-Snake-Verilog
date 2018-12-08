@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 
 module top(
-    input CLK100MHZ,
-    input reset,
-    input up,right,down,left,
-    input pause,
-    input slow_down,
-    output [7:0] an,
-    output [7:0] seg,
-    output [11:0] vga,
-    output h_sync,v_sync
+    input CLK100MHZ, // 100MHz时钟
+    input reset, // 重新开始
+    input up,right,down,left, // 方向键
+    input pause, // 暂停
+    input slow_down, // 减速
+    output [7:0] an, // 数码管使能
+    output [7:0] seg, // 数码管输出
+    output [11:0] vga, // vga显示输出，顺序为R,G,B各4位
+    output h_sync,v_sync // 行、列扫描信号
  	
  	
 // 	// FOR DEBUG
@@ -23,28 +23,31 @@ module top(
     
 
     
-    wire CLK148DOT5MHZ;
-
-    wire [32*6-1:0] snake_x_temp;
-    wire [32*6-1:0] snake_y_temp;
-	wire [31:0] snake_piece_is_display;  // 用于控制体长
+    wire CLK148DOT5MHZ; // 148.5Mhz时钟
 	
-	wire [5:0] apple_x;
-	wire [5:0] apple_y;
+	// 用于模块间传递二维数组 [5:0] snake_x/y [31:0]
+	// 参考自 https://stackoverflow.com/questions/16369698/how-to-pass-array-structure-between-two-verilog-modules
+    wire [32*6-1:0] snake_x_temp; // 蛇身坐标临时变量
+    wire [32*6-1:0] snake_y_temp; // 蛇身坐标临时变量
+    
+	wire [31:0] snake_piece_is_display;  // 控制体长
 	
-	// 00: LAUNCHING  01: PLAYING   10:DIE_FLASHING   11: INITIALIZING
-	wire [1:0] game_status;
+	wire [5:0] apple_x; // 苹果坐标
+	wire [5:0] apple_y; // 苹果坐标
 	
-	// 00: UP   01: Right   10: DOWN   11: LEFT
+	// 游戏状态 00: LAUNCHING  01: PLAYING   10:DIE_FLASHING   11: INITIALIZING
+	wire [1:0] game_status; 
+	
+	// 方向 00: UP   01: Right   10: DOWN   11: LEFT
 	wire [1:0] current_direction;
 	wire [1:0] next_direction;
 	
 	
 	
-	wire get_apple;
+	wire get_apple; // 吃到苹果
 	
-	wire hit_wall;
-	wire hit_itself;
+	wire hit_wall; // 撞墙否
+	wire hit_itself; // 撞己否
 	
 
     clk_wiz_0 (CLK148DOT5MHZ,CLK100MHZ);

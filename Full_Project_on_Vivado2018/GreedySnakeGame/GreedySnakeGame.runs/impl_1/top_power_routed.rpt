@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date             : Fri Dec  7 23:52:23 2018
+| Date             : Sat Dec  8 22:24:03 2018
 | Host             : DESKTOP-QA2Q75J running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.245        |
+| Total On-Chip Power (W)  | 0.244        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.147        |
-| Device Static (W)        | 0.098        |
+| Dynamic (W)              | 0.145        |
+| Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.9         |
 | Junction Temperature (C) | 26.1         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.005 |        6 |       --- |             --- |
-| Slice Logic    |     0.003 |     1643 |       --- |             --- |
-|   LUT as Logic |     0.003 |      763 |     63400 |            1.20 |
-|   CARRY4       |    <0.001 |       71 |     15850 |            0.45 |
-|   Register     |    <0.001 |      683 |    126800 |            0.54 |
+| Clocks         |     0.008 |        6 |       --- |             --- |
+| Slice Logic    |     0.003 |     1770 |       --- |             --- |
+|   LUT as Logic |     0.003 |      811 |     63400 |            1.28 |
+|   CARRY4       |    <0.001 |       69 |     15850 |            0.44 |
+|   Register     |    <0.001 |      704 |    126800 |            0.56 |
 |   F7/F8 Muxes  |    <0.001 |        2 |     63400 |           <0.01 |
-|   Others       |     0.000 |       55 |       --- |             --- |
-| Signals        |     0.006 |     1481 |       --- |             --- |
-| Block RAM      |     0.005 |       16 |       135 |           11.85 |
+|   Others       |     0.000 |      102 |       --- |             --- |
+| Signals        |     0.008 |     1625 |       --- |             --- |
+| Block RAM      |     0.005 |     31.5 |       135 |           23.33 |
 | MMCM           |     0.117 |        1 |         6 |           16.67 |
-| DSPs           |    <0.001 |        1 |       240 |            0.42 |
-| I/O            |     0.010 |       38 |       210 |           18.10 |
-| Static Power   |     0.098 |          |           |                 |
-| Total          |     0.245 |          |           |                 |
+| DSPs           |    <0.001 |        2 |       240 |            0.83 |
+| I/O            |     0.004 |       38 |       210 |           18.10 |
+| Static Power   |     0.099 |          |           |                 |
+| Total          |     0.244 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.036 |       0.020 |      0.016 |
+| Vccint    |       1.000 |     0.041 |       0.025 |      0.016 |
 | Vccaux    |       1.800 |     0.083 |       0.065 |      0.018 |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -131,8 +131,8 @@ Table of Contents
 +--------------------+----------------------------------------+-----------------+
 | Clock              | Domain                                 | Constraint (ns) |
 +--------------------+----------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | nolabel_line50/inst/clk_out1_clk_wiz_0 |             6.7 |
-| clkfbout_clk_wiz_0 | nolabel_line50/inst/clkfbout_clk_wiz_0 |            40.0 |
+| clk_out1_clk_wiz_0 | nolabel_line53/inst/clk_out1_clk_wiz_0 |             6.7 |
+| clkfbout_clk_wiz_0 | nolabel_line53/inst/clkfbout_clk_wiz_0 |            40.0 |
 | sys_clk_pin        | CLK100MHZ                              |            10.0 |
 | sys_clk_pin        | CLK100MHZ_IBUF_BUFG                    |            10.0 |
 +--------------------+----------------------------------------+-----------------+
@@ -147,17 +147,9 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| top                                            |     0.147 |
-|   nolabel_line104                              |    <0.001 |
-|   nolabel_line112                              |    <0.001 |
-|     nolabel_line27                             |    <0.001 |
-|       U0                                       |    <0.001 |
-|         i_synth                                |    <0.001 |
-|           i_baseblox.i_baseblox_counter        |    <0.001 |
-|             the_addsub                         |    <0.001 |
-|               no_pipelining.the_addsub         |    <0.001 |
-|                 i_lut6.i_lut6_addsub           |    <0.001 |
-|                   i_q.i_simple.qreg            |    <0.001 |
+| top                                            |     0.145 |
+|   nolabel_line107                              |    <0.001 |
+|   nolabel_line115                              |    <0.001 |
 |     nolabel_line28                             |    <0.001 |
 |       U0                                       |    <0.001 |
 |         i_synth                                |    <0.001 |
@@ -182,18 +174,41 @@ Table of Contents
 |               no_pipelining.the_addsub         |    <0.001 |
 |                 i_lut6.i_lut6_addsub           |    <0.001 |
 |                   i_q.i_simple.qreg            |    <0.001 |
-|     nolabel_line32                             |    <0.001 |
-|   nolabel_line50                               |     0.117 |
+|     nolabel_line31                             |    <0.001 |
+|       U0                                       |    <0.001 |
+|         i_synth                                |    <0.001 |
+|           i_baseblox.i_baseblox_counter        |    <0.001 |
+|             the_addsub                         |    <0.001 |
+|               no_pipelining.the_addsub         |    <0.001 |
+|                 i_lut6.i_lut6_addsub           |    <0.001 |
+|                   i_q.i_simple.qreg            |    <0.001 |
+|     nolabel_line34                             |    <0.001 |
+|   nolabel_line53                               |     0.117 |
 |     inst                                       |     0.117 |
-|   nolabel_line52                               |     0.013 |
-|     nolabel_line44                             |     0.006 |
-|     nolabel_line75                             |     0.006 |
-|       U0                                       |     0.006 |
-|         inst_blk_mem_gen                       |     0.006 |
-|           gnbram.gnativebmg.native_blk_mem_gen |     0.006 |
-|             valid.cstr                         |     0.006 |
+|   nolabel_line55                               |     0.017 |
+|     nolabel_line46                             |     0.005 |
+|     nolabel_line81                             |     0.009 |
+|       U0                                       |     0.009 |
+|         inst_blk_mem_gen                       |     0.009 |
+|           gnbram.gnativebmg.native_blk_mem_gen |     0.009 |
+|             valid.cstr                         |     0.009 |
+|               bindec_a.bindec_inst_a           |    <0.001 |
 |               has_mux_a.A                      |    <0.001 |
 |               ramloop[0].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[10].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[11].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[12].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[13].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[14].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[15].ram.r                |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[16].ram.r                |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[1].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
@@ -209,9 +224,13 @@ Table of Contents
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[7].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
-|   nolabel_line65                               |     0.005 |
-|   nolabel_line82                               |    <0.001 |
-|   nolabel_line94                               |    <0.001 |
+|               ramloop[8].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[9].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|   nolabel_line68                               |     0.005 |
+|   nolabel_line85                               |    <0.001 |
+|   nolabel_line97                               |    <0.001 |
 +------------------------------------------------+-----------+
 
 

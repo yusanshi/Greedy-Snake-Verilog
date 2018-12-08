@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-// Date        : Fri Dec  7 17:06:15 2018
+// Date        : Sat Dec  8 20:09:53 2018
 // Host        : DESKTOP-QA2Q75J running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
@@ -15,8 +15,8 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_4_1,Vivado 2018.2.2" *)
 module blk_mem_gen_0(clka, addra, douta)
-/* synthesis syn_black_box black_box_pad_pin="clka,addra[18:0],douta[0:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clka,addra[19:0],douta[0:0]" */;
   input clka;
-  input [18:0]addra;
+  input [19:0]addra;
   output [0:0]douta;
 endmodule

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module turn(
+	// 变量说明见top模块
     input clock,
     input up,right,down,left,
     input [1:0] current_direction,

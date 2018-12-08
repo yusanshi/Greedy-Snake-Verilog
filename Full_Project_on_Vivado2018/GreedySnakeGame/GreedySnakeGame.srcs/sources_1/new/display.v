@@ -1,5 +1,6 @@
 module display(
-    input clock, // 148.5MHZ
+	// 变量说明见top模块
+    input clock, // 148.5MHZ，用于输出1920x1080@60Hz的VGA信号
     input [5:0] apple_x,
     input [5:0] apple_y,
     input [32*6-1:0] snake_x_temp,
@@ -28,7 +29,8 @@ module display(
 	wire [10:0] y_counter;
 	wire in_display_area;
 	
-	wire [18:0] address;   
+	
+	reg [19:0] address;   
 	wire data;
 	    
 	// snake_x[0]：头的横坐标  snake_y[0]:头的纵坐标
@@ -49,17 +51,21 @@ module display(
 	    .y_counter(y_counter),
 	    .in_display_area(in_display_area)
 	  );	
-	  
+	 
+	
+	// 用于模块间传递二维数组 [5:0] snake_x/y [31:0]
+	// 参考自 https://stackoverflow.com/questions/16369698/how-to-pass-array-structure-between-two-verilog-modules
 	integer i;
 	always @(snake_x_temp,snake_y_temp)
 	begin
 	for (i=0;i<32;i=i+1)
-	begin
-		// 片选
-		snake_x[i]<=snake_x_temp[6*i+:6];
-		snake_y[i]<=snake_y_temp[6*i+:6];
+		begin
+			// 片选
+			snake_x[i]<=snake_x_temp[6*i+:6];
+			snake_y[i]<=snake_y_temp[6*i+:6];
+		end
 	end
-	end
+	
 	
 	initial
 	begin
@@ -72,17 +78,22 @@ module display(
 		current_y<=y_counter/40;
 	end 
 	
-	blk_mem_gen_0(clock,address,data);
-	assign address=y_counter/2*h_active_pixels/2+x_counter/2;
+	blk_mem_gen_0 (clock,address,data);
+	
+
 	
     always @(posedge clock)
     begin
     	if (game_status==LAUNCHING)
     		begin
-				if (in_display_area==1)
+    			// 本身要显示的图1920x1080所需ROM深度超过单个ROM深度，采用两个ROM有些复杂，
+    			// 由于启动图只有中间部分有东西，故把图片裁剪放中间即可（裁剪为1320x770）。
+				if (x_counter>=300 && x_counter<1620 && y_counter>=180 && y_counter<950)
 				begin
-				if (data==1 && current_x!=0 && current_x!=47 &&  current_y!=0 && current_y!=26) vga<=12'b1111_1111_1111;
-				else vga<=0;
+					// 关于解决ROM读取延迟，本人采用的方法很弱鸡（下面的185，945，295都是试出来的），求更好的方法。
+					address<=(y_counter-180)*1320+x_counter-300-295;
+					if (data==0 && y_counter>=185 && y_counter<945) vga<=12'b1111_1111_1111;
+					else vga<=0;
 				end
 				else vga<=0;
 			end

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module snake(
+	// 变量说明见top模块
 	input clock,
 	input pause,
 	input slow_down,
@@ -12,7 +13,7 @@ module snake(
 	output reg [1:0] current_direction,
     output [32*6-1:0] snake_x_temp,
 	output [32*6-1:0] snake_y_temp,
-	output reg [31:0] snake_piece_is_display,
+	output reg [31:0] snake_piece_is_display, // 控制蛇体长
 	output reg get_apple,
 	output reg hit_wall,
 	output reg hit_itself
@@ -20,7 +21,7 @@ module snake(
     
     reg [25:0] count;
     reg [25:0] count_two;
-    reg [31:0] snake_piece_is_display_origin;
+    reg [31:0] snake_piece_is_display_origin; // 存储体长的旧值，用于死亡闪烁
     
 	localparam LAUNCHING=2'b00;
     localparam PLAYING=2'b01;
@@ -35,13 +36,17 @@ module snake(
 	// snake_x[0]：头的横坐标  snake_y[0]:头的纵坐标
     reg [5:0] snake_x [31:0];
     reg [5:0] snake_y [31:0];
-    
+
+
+	// 用于模块间传递二维数组 [5:0] snake_x/y [31:0]
+	// 参考自 https://stackoverflow.com/questions/16369698/how-to-pass-array-structure-between-two-verilog-modules
     genvar i;
     generate for (i=0;i<32;i=i+1)
     begin
     	assign snake_x_temp[6*i+:6]=snake_x[i];
     	assign snake_y_temp[6*i+:6]=snake_y[i];
    	end endgenerate
+   	
    	
 	initial
    	begin
@@ -70,16 +75,17 @@ module snake(
     	
     	else if (game_status==DIE_FLASHING)
     	begin
+    	// 闪烁
     	if (count_two==20000000) snake_piece_is_display<=0;
     	else if (count_two==0) snake_piece_is_display<=snake_piece_is_display_origin;
     	end
     	
     	else if (game_status==PLAYING && pause==0)
     	begin
-    		snake_piece_is_display_origin<=snake_piece_is_display;
+    		snake_piece_is_display_origin<=snake_piece_is_display; // 存储体长的旧值，用于死亡闪烁
     		
     		if (snake_x[0]==0 || snake_x[0]==47 || snake_y[0]==0 || snake_y[0]==26) hit_wall<=1;
-    		else hit_wall<=0;
+    		else hit_wall<=0; // 是否撞墙
     		
     		if (
             (snake_x[0]==snake_x[1] && snake_y[0]==snake_y[1] && snake_piece_is_display[1]==1) ||
@@ -115,24 +121,26 @@ module snake(
     		(snake_x[0]==snake_x[31] && snake_y[0]==snake_y[31] && snake_piece_is_display[31]==1)
     		)
     		hit_itself<=1;
-    		else hit_itself<=0;
+    		else hit_itself<=0; // 是否撞自己
     		
     		if (snake_x[0]==apple_x && snake_y[0]==apple_y) get_apple<=1;
-    		else get_apple<=0;
+    		else get_apple<=0; // 是否吃到苹果
     		
     		if (get_apple==1 ) 
     		begin
-    		snake_piece_is_display<=2*snake_piece_is_display+1;
+    		snake_piece_is_display<=2*snake_piece_is_display+1; // 增加体长（把snake_piece_is_display最后一个0变成1）
     		get_apple<=0;
     		end
     		
-    		current_direction<=next_direction;
+    		current_direction<=next_direction; // 更新方向
     		
-    		if (count<8000000*(2+slow_down))
+    		if (count<8000000*(2+slow_down)) // 控制速度
     			count<=count+1;
     		else
     		begin
 				count<=0;
+				
+				// 头前进
 				case (next_direction)
 				UP:
 					begin
@@ -161,6 +169,7 @@ module snake(
 					end
 				endcase
 				
+				// 身体前进
 				snake_x[1]<=snake_x[0];
 				snake_y[1]<=snake_y[0];
 	
