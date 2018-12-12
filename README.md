@@ -94,7 +94,7 @@ Greedy Snake game on Nexys 4 DDR with Verilog.
 | 检测是否撞到自己 | `snake_x[0]==snake_x[i] && snake_y[0]==snake_y[i] && snake_piece_is_display[i]==1)`,i=1,2,3... |
 | 存储蛇长         | `reg [31:0] snake_piece_is_display;`                         |
 | 蛇长加一         | `snake_piece_is_display<=2*snake_piece_is_display+1;`        |
-| 传递二维数组     | Verilog不允许模块间直接传递二维数组，故使用一位数组来传递，参考自https://stackoverflow.com/questions/16369698/how-to-pass-array-structure-between-two-verilog-modules |
+| 传递二维数组     | Verilog不允许模块间直接传递二维数组，故使用一维数组来传递，参考自https://stackoverflow.com/questions/16369698/how-to-pass-array-structure-between-two-verilog-modules |
 | 蛇身闪烁         | 由于使用了`snake_piece_is_display`存储蛇长，用`snake_piece_is_display_origin`存储旧值，让`snake_piece_is_display`在`0`和`snake_piece_is_display_origin`间转换即可 |
 | 控制速度         | 将`8000000*(2+slow_down)`作为`count`的最大值，若`slow_down`为1则一次前进用时增加1/2 |
 | 图片显示         | 将想要显示的图（1920x1080）只保留中间有效部分（1320x770），创建ROM，深度为1320x770=1016400，其中BMP转化为COE文件使用了BMP2Mif.exe，用试错法调整常量解决了ROM的延迟（表现为图像左右移动）问题 |
