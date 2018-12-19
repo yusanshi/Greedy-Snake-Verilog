@@ -1,9 +1,9 @@
-# Greedy_Snake_Verilog
+# Greedy Snake Verilog
+---
 
 Greedy Snake game on Nexys 4 DDR with Verilog.
 
-> 参考了https://github.com/tiezhu-lee/Greedy_Snake ，鸣谢@tiezhu-lee。
-
+> 参考了https://github.com/tiezhu-lee/Greedy_Snake，鸣谢@tiezhu-lee。
 
 ## 1. 游戏说明
 
@@ -30,14 +30,14 @@ Greedy Snake game on Nexys 4 DDR with Verilog.
 
 - 启动图（如下）。
 
-  ![1544187163645](images/1544187163645.png)
+  ![1544187163645](README.assets/1544187163645.png)
 
 ## 2. 代码说明
 ### 2.1 程序结构
 
 #### 2.1.1 图示
 
-![1544274441309](images/1544274441309.png)
+![1544274441309](README.assets/1544274441309.png)
 
 #### 2.1.2 文字说明
 
@@ -98,16 +98,23 @@ Greedy Snake game on Nexys 4 DDR with Verilog.
 | 蛇身闪烁         | 由于使用了`snake_piece_is_display`存储蛇长，用`snake_piece_is_display_origin`存储旧值，让`snake_piece_is_display`在`0`和`snake_piece_is_display_origin`间转换即可 |
 | 控制速度         | 将`8000000*(2+slow_down)`作为`count`的最大值，若`slow_down`为1则一次前进用时增加1/2 |
 | 图片显示         | 将想要显示的图（1920x1080）只保留中间有效部分（1320x770），创建ROM，深度为1320x770=1016400，其中BMP转化为COE文件使用了BMP2Mif.exe，用试错法调整常量解决了ROM的延迟（表现为图像左右移动）问题 |
-|                  |                                                              |
-|                  |                                                              |
 
 
 
-## 3. 游戏截图
-> 完整视频演示：http://yusanshi.com/Greedy_Snake_Verilog.mp4
+## 3. 游戏截图（部分）
+
 
 ### 3.1 启动图
 
+![1545232738639](README.assets/1545232738639.png)
+
 ### 3.2 计分
 
+![1545232753368](README.assets/1545232753368.png)
+
 ### 3.3 死亡闪烁
+
+![1545232792712](README.assets/1545232792712.png)
+
+## 4. 演示视频
+> 完整视频演示：https://yun.yusanshi.com/Greedy_Snake_Verilog.mp4

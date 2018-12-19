@@ -2,8 +2,8 @@
 # Vivado v2018.2.2 (64-bit)
 # SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
 # IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
-# Start of session at: Sat Dec  8 22:20:28 2018
-# Process ID: 11848
+# Start of session at: Mon Dec 10 01:18:35 2018
+# Process ID: 1424
 # Current directory: C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/top.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10360 
+INFO: Helper process launched with PID 15220 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 391.727 ; gain = 103.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 390.691 ; gain = 102.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/display.v:1]
 	Parameter LAUNCHING bound to: 2'b00 
 	Parameter PLAYING bound to: 2'b01 
@@ -45,8 +45,8 @@ INFO: [Synth 8-6157] synthesizing module 'vga_sync_generator' [C:/Users/Yu/Docum
 	Parameter v_back_porch bound to: 36 - type: integer 
 	Parameter v_total_piexls bound to: 1125 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'vga_sync_generator' (2#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/vga_sync_generator.v:3]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (3#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (3#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'display' (4#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/display.v:1]
 INFO: [Synth 8-6157] synthesizing module 'snake' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/snake.v:3]
 	Parameter LAUNCHING bound to: 2'b00 
@@ -83,14 +83,14 @@ INFO: [Synth 8-6157] synthesizing module 'score' [C:/Users/Yu/Documents/GitHub/D
 	Parameter PLAYING bound to: 2'b01 
 	Parameter DIE_FLASHING bound to: 2'b10 
 	Parameter INITIALIZING bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_0' (9#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_1' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_1' (10#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_2' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_2' (11#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_3' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_3' (12#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-11848-DESKTOP-QA2Q75J/realtime/c_counter_binary_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_0' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_0' (9#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_1' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_1' (10#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_2' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_2' (11#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_3' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_3' (12#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/.Xil/Vivado-1424-DESKTOP-QA2Q75J/realtime/c_counter_binary_3_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'seg' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/seg.v:3]
 INFO: [Synth 8-6157] synthesizing module 'bcdto8segment_dataflow' [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/bcdto8segment_dataflow.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'bcdto8segment_dataflow' (13#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/bcdto8segment_dataflow.v:3]
@@ -98,7 +98,7 @@ INFO: [Synth 8-6155] done synthesizing module 'seg' (14#1) [C:/Users/Yu/Document
 INFO: [Synth 8-6155] done synthesizing module 'score' (15#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/score.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 448.609 ; gain = 159.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 448.707 ; gain = 160.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -111,10 +111,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 448.609 ; gain = 159.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.707 ; gain = 160.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 448.609 ; gain = 159.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 448.707 ; gain = 160.379
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -134,10 +134,7 @@ Finished Parsing XDC File [c:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/Gr
 Parsing XDC File [c:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line55/nolabel_line81'
 Finished Parsing XDC File [c:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'nolabel_line55/nolabel_line81'
 Parsing XDC File [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc]
-WARNING: [Vivado 12-180] No cells matched '<cellname>'. [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc:10]
-WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -of_objects [get_cells <cellname>]'. [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc:10]
 Finished Parsing XDC File [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/constrs_1/imports/Digital_Circuit/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/dont_touch.xdc]
@@ -147,21 +144,21 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 811.613 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 810.617 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'nolabel_line115/nolabel_line28' at clock pin 'CLK' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'nolabel_line115/nolabel_line29' at clock pin 'CLK' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'nolabel_line115/nolabel_line30' at clock pin 'CLK' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'nolabel_line115/nolabel_line31' at clock pin 'CLK' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'nolabel_line55/nolabel_line81' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 811.613 ; gain = 522.992
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 810.617 ; gain = 522.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 811.613 ; gain = 522.992
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 810.617 ; gain = 522.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -175,7 +172,7 @@ Applied set_property DONT_TOUCH = true for nolabel_line53. (constraint file  aut
 Applied set_property DONT_TOUCH = true for nolabel_line115/nolabel_line28. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line55/nolabel_line81. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 811.613 ; gain = 522.992
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 810.617 ; gain = 522.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/snake.v:144]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.srcs/sources_1/new/snake.v:144]
@@ -186,7 +183,7 @@ INFO: [Synth 8-5544] ROM "current_direction" won't be mapped to Block RAM becaus
 INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "random_for_x" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 811.613 ; gain = 522.992
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 810.617 ; gain = 522.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,7 +371,7 @@ WARNING: [Synth 8-3332] Sequential element (nolabel_line107/random_for_y_reg[6])
 WARNING: [Synth 8-3332] Sequential element (nolabel_line107/random_for_y_reg[5]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (nolabel_line115/nolabel_line34/an_reg[7]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 811.613 ; gain = 522.992
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 810.617 ; gain = 522.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -404,13 +401,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'nolabel_line53/clk_out1' to pin 'nolabel_line53/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 843.160 ; gain = 554.539
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 842.129 ; gain = 553.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 973.020 ; gain = 684.398
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 970.605 ; gain = 682.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,7 +421,7 @@ Start Technology Mapping
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line107/apple_y_reg[5] )
 WARNING: [Synth 8-3332] Sequential element (nolabel_line107/apple_y_reg[5]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,7 +445,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -461,7 +458,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -473,25 +470,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -552,11 +549,11 @@ Report Instance Areas:
 |9     |  nolabel_line97   |turn               |     2|
 +------+-------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 971.621 ; gain = 683.293
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 974.027 ; gain = 322.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 974.027 ; gain = 685.406
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 971.621 ; gain = 321.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 971.621 ; gain = 683.293
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -567,11 +564,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-70 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+70 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 974.027 ; gain = 696.875
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 971.621 ; gain = 694.762
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Yu/Documents/GitHub/Digital_Circuit/lab11/GreedySnakeGame/GreedySnakeGame.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 974.027 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  8 22:21:34 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 971.621 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 10 01:19:58 2018...

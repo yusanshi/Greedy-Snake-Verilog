@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Sat Dec  8 22:23:04 2018
+| Date         : Mon Dec 10 01:21:50 2018
 | Host         : DESKTOP-QA2Q75J running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -61,11 +61,11 @@ Table of Contents
 +-------------------------------+-----------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
 |          Clock Signal         |                 Enable Signal                 |                                    Set/Reset Signal                                    | Slice Load Count | Bel Load Count |
 +-------------------------------+-----------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
-|  CLK100MHZ_IBUF_BUFG          | nolabel_line115/p_2_in                        | nolabel_line115/nolabel_line30/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
-|  CLK100MHZ_IBUF_BUFG          | nolabel_line115/CE0                           | nolabel_line115/nolabel_line31/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
 |  CLK100MHZ_IBUF_BUFG          | nolabel_line85/CE                             | nolabel_line115/nolabel_line28/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
-|  CLK100MHZ_IBUF_BUFG          | nolabel_line85/seg_reg[6]                     | nolabel_line115/nolabel_line29/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
 |  CLK100MHZ_IBUF_BUFG          | nolabel_line85/current_direction_reg[0]       | nolabel_line85/snake_x_reg[0][0]_0                                                     |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG          | nolabel_line85/seg_reg[6]                     | nolabel_line115/nolabel_line29/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG          | nolabel_line115/CE0                           | nolabel_line115/nolabel_line31/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG          | nolabel_line115/p_2_in                        | nolabel_line115/nolabel_line30/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
 |  CLK100MHZ_IBUF_BUFG          | nolabel_line85/snake_x_reg[0][0][0]           | nolabel_line85/snake_x_reg[0][0]_0                                                     |                3 |             12 |
 |  CLK100MHZ_IBUF_BUFG          | nolabel_line85/snake_y_reg[0][0][0]           | nolabel_line85/snake_x_reg[0][0]_0                                                     |                3 |             12 |
 |  CLK100MHZ_IBUF_BUFG          |                                               |                                                                                        |                7 |             16 |
