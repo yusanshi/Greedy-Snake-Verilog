@@ -1,2 +1,1 @@
-*.v linguist-language=verilog
 *.vhdl linguist-language=verilog
