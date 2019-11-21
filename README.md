@@ -3,7 +3,7 @@
 
 Greedy Snake game on Nexys 4 DDR with Verilog.
 
-> 参考了https://github.com/tiezhu-lee/Greedy_Snake，鸣谢@tiezhu-lee。
+> 参考了https://github.com/tiezhu-lee/Greedy_Snake ，鸣谢@tiezhu-lee。
 
 ## 1. 游戏说明
 
