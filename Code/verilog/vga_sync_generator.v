@@ -4,8 +4,8 @@ module vga_sync_generator(
 	// 变量说明见top模块
 	input clock,
 	output reg h_sync,v_sync,
-	output reg [11:0] x_counter, // 行计数
-	output reg [10:0] y_counter, // 列计数
+	output reg [11:0] x_counter, // 列计数
+	output reg [10:0] y_counter, // 行计数
 	output reg in_display_area // 是否在显示区域（x_counter<1920 && y_counter<1080)
 	);
        
